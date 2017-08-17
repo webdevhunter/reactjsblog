@@ -1,0 +1,50 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>React React React!</title>
+<style>
+#singlediv {
+padding: 10px;
+background-color: white;
+}
+#singlediv h3 {
+font-size: 48px;
+font-family: sans-serif;
+color: #0080A8;
+}
+</style>
+</head>
+<body>
+
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<div id="singlediv"></div>
+  
+<script type="text/babel">
+var SingleClass = React.createClass({
+render: function() {
+return (
+  //console.log("render func called")
+<div>
+<h3>{this.props.name1}</h3>
+<h3>{this.props.name2}</h3>
+<h3>{this.props.name3}</h3>
+</div>
+);
+}
+});
+
+
+ReactDOM.render(
+<div>
+<SingleClass name1="krishna" name2="sarath" name3="praveen"/>
+ <SingleClass name1="madhu" name2="gayathri" name3="lakshmi"/>
+</div>,
+document.querySelector("#singlediv")
+);
+
+</script>
+</body>
+</html>

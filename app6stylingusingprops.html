@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>React React React!</title>
+
+</head>
+<body>
+
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<div id="singlediv"></div>
+  
+<script type="text/babel">
+
+
+
+var Letter=React.createClass({
+  render:function(){
+var corrStyle={
+padding: 10,
+margin: 10,
+backgroundColor: this.props.bgcolor,
+color: "#333",
+display: "inline-block",
+fontFamily: "monospace",
+fontSize: 32,
+textAlign: "center"
+};
+    return(
+      <div style={corrStyle}>
+      {this.props.children}
+      </div>
+    );
+  }
+});
+
+var destination=document.querySelector("#singlediv")
+ReactDOM.render(
+  <div>
+  <Letter bgcolor='pink'>A</Letter>
+  <Letter bgcolor='green'>E</Letter>
+  <Letter bgcolor='blue'>I</Letter>
+  <Letter bgcolor='red'>O</Letter>
+  <Letter bgcolor='orange'>U</Letter>
+   </div>,
+  destination
+
+);
+
+</script>
+</body>
+</html>

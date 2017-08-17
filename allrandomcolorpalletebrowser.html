@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/jaqokisime/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>React React React!</title>
+</head>
+<body>
+
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<div id="component"></div>
+  
+<script type="text/babel">
+
+
+var Label = React.createClass({
+render: function() {
+  var labelSize={
+    textAlign:"center",
+    fontFamily:"sans-serif",
+    color:this.props.color,
+    fontWeight:"bold",
+    padding: 13,
+    margin: 0,
+  }
+return (
+<div style={labelSize}>{this.props.color}</div>
+);
+}
+});
+
+
+var Square = React.createClass({
+render: function() {
+var squareStyle = {
+height:150,
+width:150,
+backgroundColor:this.props.color,
+}
+return(
+<div style={squareStyle}></div>
+);
+}
+});
+
+
+
+
+class Card extends React.Component {
+render() {
+var cardStyle = {
+display:"inline-block",
+height: 200,
+width: 150,
+padding: 0,
+margin: 40,
+backgroundColor: "#FFF",
+WebkitFilter: "drop-shadow(0px 0px 5px #666)",
+filter: "drop-shadow(0px 0px 5px #666)"
+};
+    return (
+      <div style={cardStyle}>
+      <Square color={this.props.color}/>  
+      <Label color={this.props.color}/>
+      </div>
+    );
+  }
+}
+function ranFunc(){
+var krishna = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"];
+var arg=Math.floor(Math.random()*krishna.length)
+return <Card color={krishna[arg]}/>
+}
+// 2. Render the component in the browser
+var destination=document.querySelector("#component")
+ReactDOM.render(
+<div>
+  {ranFunc()}
+  {ranFunc()}
+  {ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+  {ranFunc()}
+  {ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+  {ranFunc()}
+  {ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+  {ranFunc()}
+  {ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+{ranFunc()}
+
+
+
+</div>,
+destination
+);
+
+</script>
+</body>
+</html>

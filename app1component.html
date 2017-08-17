@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/jaqokisime/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>React React React!</title>
+<style>
+#singlediv {
+padding: 10px;
+background-color: white;
+}
+#singlediv h1 {
+font-size: 48px;
+font-family: sans-serif;
+color: #0080A8;
+}
+</style>
+</head>
+<body>
+
+<script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+<div id="singlediv"></div>
+  
+<script type="text/babel">
+var SingleClass = React.createClass({
+render: function() {
+return (
+  //console.log("render func called")
+<div>
+<h1>Krishna</h1>
+<h1>sarath</h1>
+<h1>praveen</h1>
+</div>
+);
+}
+});
+
+
+
+
+
+ReactDOM.render(
+<SingleClass/>,
+document.querySelector("#singlediv")
+);
+
+</script>
+</body>
+</html>

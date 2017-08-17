@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>React React React!</title>
+</head>
+<body>
+<script src="https://fb.me/react-15.1.0.js"></script>
+<script src="https://fb.me/react-dom-15.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js"></script>
+
+
+<div id="component"></div>
+  
+<script type="text/babel-core/6"
+var Label = React.createClass({
+render: function() {
+  var labelSize={
+    textAlign:"center",
+    fontFamily:"sans-serif",
+    color:this.props.color,
+    fontWeight:"bold",
+    padding: 13,
+    margin: 0,
+  }
+return (
+<div style={labelSize}>{this.props.color}</div>
+);
+}
+});
+
+
+var Square = React.createClass({
+render: function() {
+var squareStyle = {
+height:150,
+width:150,
+backgroundColor:this.props.color,
+}
+return(
+<div style={squareStyle}></div>
+);
+}
+});
+
+
+
+
+class Card extends React.Component {
+render() {
+var cardStyle = {
+display:"inline-block",
+height: 200,
+width: 150,
+padding: 0,
+margin: 40,
+backgroundColor: "#FFF",
+WebkitFilter: "drop-shadow(0px 0px 5px #666)",
+filter: "drop-shadow(0px 0px 5px #666)"
+};
+    return (
+      <div style={cardStyle}>
+      <Square color={this.props.color}/>  
+      <Label color={this.props.color}/>
+      </div>
+    );
+  }
+}
+
+// 2. Render the component in the browser
+var destination=document.querySelector("#component")
+ReactDOM.render(
+<div>
+  <Card color="navy"/>
+  <Card color="blue"/>
+  <Card color="aqua"/>
+  <Card color="teal"/>
+  <Card color="olive"/>
+  <Card color="green"/>
+  <Card color="lime"/>
+  <Card color="yellow"/>
+  <Card color="orange"/>
+  <Card color="red"/>
+  <Card color="fuchsia"/>
+  <Card color="purple"/>
+  <Card color="black"/>
+
+
+  <Card color="gray"/>
+  <Card color="silver"/>
+  
+  </div>,
+destination
+);
+</script>
+</body>
+</html>

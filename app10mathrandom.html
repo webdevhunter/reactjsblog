@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/hawazuwine/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>React React React!</title>
+</head>
+<body>
+<script src="https://fb.me/react-15.1.0.js"></script>
+<script src="https://fb.me/react-dom-15.1.0.js"></script>
+<div id="component"></div>
+  
+<script id="jsbin-javascript">
+var Circle = React.createClass({
+render: function() {
+var circleStyle = {
+padding: 10,
+margin: 20,
+display: "inline-block",
+backgroundColor: this.props.bgColor,
+borderRadius: "50%",
+width: 100,
+height: 100,
+};
+return (
+<div style={circleStyle}>
+  <p>{this.props.arg}</p>
+</div>
+);
+}
+});
+var destination = document.querySelector("#component");
+function showCircle() {
+var colors = ["pink", "green", "blue", "maroon"];
+var ran = Math.floor(Math.random() * colors.length);
+  
+// return a Circle with a randomly chosen color
+return <Circle arg={ran} bgColor={colors[ran]}/>;
+};
+ReactDOM.render(
+<div>
+{showCircle()}
+{showCircle()}
+{showCircle()}
+{showCircle()}
+</div>,
+destination
+);
+</script>
+</body>
+</html>
